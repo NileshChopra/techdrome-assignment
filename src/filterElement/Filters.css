@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterContainer {
+    background-color: white;
+    border-radius: 5px;
+    height: min-content;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yearOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: rgb(182, 213, 134);
+    padding: 2px 15px 2px 15px;
+    margin: 10px;
+}
+
+input[type="radio"]:checked+label {
+    background-color: rgb(2, 165, 2);
+}
+
+h1,
+h3,
+p,
+hr {
+    margin-bottom: 0px;
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        width: min(20vw, 250px);
+        margin-right: min(20px);
+        width: min(25vw, 350px);
+    }
+
+    .filterContainer {
+        margin-top: 35px;
+        width: min(23vw, 250px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: min(15vw, 250px);
+        margin-right: min(20px);
+        width: min(15vw, 350px);
+    }
+
+    .filterContainer {
+        width: min(15vw, 250px);
+    }
+}

@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Filters from './filterElement/Filters';
+import Footer from './footerElement/Footer';
+import Header from './headerElement/Header';
+import Missions from './missionsElement/Missions';
+import React, { useState } from 'react';
 function App() {
+  const [params, setParams] = useState({})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className='mainContainer'>
+        <div className='filters' >
+          <Filters params={params} setParams={setParams} />
+        </div>
+        <div className='missions'>
+          <Missions params={params} />
+        </div>
+      </div >
+      <Footer />
+    </>
   );
 }
 

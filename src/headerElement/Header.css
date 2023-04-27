@@ -1,0 +1,22 @@
+.header {
+    width: 100vw;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 700px) {
+    .heading {
+        text-align: left;
+        margin-left: 5vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .heading {
+        text-align: left;
+        margin-left: 10px;
+    }
+}
